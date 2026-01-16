@@ -22,3 +22,7 @@ Following this rule guarantees:
 - Clean sends
 - No draft-related bugs
 - No partial or failed messages
+
+For output type in terminal as:
+  Example:
+    python agent.py your_contact_name message.txt 9 0              #9 0 is the time 
