@@ -51,6 +51,16 @@ def send_whatsapp_message(contact_name: str, message: str) -> dict:
                 (By.XPATH, '//*[@id="main"]/footer/div[1]/div/span/div/div/div/div[3]/div/p')
             )
         )
+        try:
+            message_box.click()
+            time.sleep(1.5)
+
+            # HARD CLEAR draft
+            message_box.send_keys(Keys.CONTROL, "a")
+            message_box.send_keys(Keys.BACKSPACE)
+        except:
+            pass
+
         time.sleep(delay)
         message_box.send_keys(message)
         time.sleep(delay)
